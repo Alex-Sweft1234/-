@@ -8,7 +8,7 @@ namespace NNet
 {
     public class Neuron
     {
-        const int n = 53;
+        const int n = 54;
         public Random r = new Random();
         double[] Xi = new double[n];
         double[] Weight = new double[n];
@@ -49,7 +49,7 @@ namespace NNet
     public class NeuroNet
     {
         
-        const int n = 53;
+        const int n = 54;
         public NeuroNet(double[] Xi)
         {
             this.Xi = Xi;
@@ -57,41 +57,30 @@ namespace NNet
         double[] Xi = new double[n];
 
         //инициализация и расчет выходного значения сети
-        public double InitNet(double[] Xi)
+        public double[] InitNet()
         {
-            double[] net = new double[53];
+            double[] net = new double[10];
             Neuron N = new Neuron(Xi);
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < 10; i++)
             {
                 net[i] = N.FuncActivation();
             }
-            Neuron NV = new Neuron(net);
-            double y = NV.FuncActivation();
-            return y;
+            return net;
         }
 
-        public double[] runNet()
-        {
-            double[] y = new double[10];
-            for (int i = 0; i < 10; i++)
-            {
-                y[i] = InitNet(Xi);
-            }
-            return y;
-        }
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-            double[] X = { 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0 };
+            double[] X = { 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1 };
             NeuroNet p = new NeuroNet(X);
-            double[] c = p.runNet();
+            double[] c = p.InitNet();
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("{0}-я итерация: {1}", i+1, c[i]);
+                Console.WriteLine("{0}-й выход: {1}", i+1, c[i]);
             }
             Console.ReadKey();
         }
