@@ -1,6 +1,6 @@
 C:\Users\babae_000\Desktop\Нейронная сеть\NNet\NNet\bin\Debug\NNet.exe.config
+C:\Users\babae_000\Desktop\Нейронная сеть\NNet\NNet\obj\Debug\NNet.exe
+C:\Users\babae_000\Desktop\Нейронная сеть\NNet\NNet\obj\Debug\NNet.pdb
 C:\Users\babae_000\Desktop\Нейронная сеть\NNet\NNet\bin\Debug\NNet.exe
 C:\Users\babae_000\Desktop\Нейронная сеть\NNet\NNet\bin\Debug\NNet.pdb
 C:\Users\babae_000\Desktop\Нейронная сеть\NNet\NNet\obj\Debug\NNet.csprojResolveAssemblyReference.cache
-C:\Users\babae_000\Desktop\Нейронная сеть\NNet\NNet\obj\Debug\NNet.exe
-C:\Users\babae_000\Desktop\Нейронная сеть\NNet\NNet\obj\Debug\NNet.pdb
