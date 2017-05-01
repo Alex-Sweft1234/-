@@ -76,7 +76,7 @@ namespace NNet
         public double[] trainNet()
         {
             //при обучении обычно сходится функция на 0,5; редко достигает 0,3
-            double err = 0.3;
+            double err = 0.5;
             double functag = 0;
             double f = 0;
             double[] Target = {0,1,0,0,0,0,0,0,0,0};
@@ -84,9 +84,10 @@ namespace NNet
             //расчет целевой функции
             for (int i = 0; i < 10; i++)
             {
-                f = 0.5 * Math.Pow((Yi[i] - Target[i]),2);
+                f =  Math.Pow((Yi[i] - Target[i]),2);
                 functag = functag + f;
             }
+            functag = functag * 0.5;
             double[] net = new double[10];
             Neuron N = new Neuron(Xi);
             //обучение сети
